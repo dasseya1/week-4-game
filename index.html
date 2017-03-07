@@ -13,15 +13,49 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-2  pull-left">
-      <p>CrystalsCollector!</p>
+    <div class="col-sm-3 col-sm-offset-9 col-sm-pull-9">
+      <p class="text-center" id="title">CrystalsCollector!</p>
     </div>
-
-
-    
+    <div class="col-sm-6 col-sm-offset-6 col-sm-pull-6" id="description">
+      <p>You will be given a random number at the start of the game.</p>
+      <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score. </p>
+      <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+      <p>The value of each crystal is hidden from you until you click on it.</p>
+      <p>Each time when the game starts, the game will change the value of each crystal.</p>
+    </div>
+    <div class="col-sm-2" id="scoretomatch">
+      <p id="randomnumber">0</p>
+    </div>
+    <div class="col-sm-1" id="win-lose">
+      <p id="result"></p>
+      <p>Wins: <span id="wscore">0</span></p>
+      <p>Losses: <span id="lscore">0</span></p>
+    </div>   
   </div><!-- row -->   
 </div><!-- content container -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1" id="picture_1">
+      <div><img src="assets/images/pic1.jpg" class="img-responsive"  alt="Crystal 1"></div>
+    </div>
+    <div class="col-sm-1" id="picture_2">
+      <div><img src="assets/images/pic2.jpg" class="img-responsive"  alt="Crystal 2"></div>
+    </div>  
+    <div class="col-sm-1" id="picture_3">
+      <div><img src="assets/images/pic3.jpg" class="img-responsive"  alt="Crystal 3"></div>
+    </div>  
+    <div class="col-sm-1" id="picture_4">
+      <div><img src="assets/images/pic4.jpg" class="img-responsive"  alt="Crystal 4"></div>
+    </div>
+    <div class="col-sm-2 col-sm-offset-10 col-sm-pull-10" id="totalscore">
+      <p> Your total score is:</p>
+    </div>
+    <div class="col-sm-2 col-sm-offset-10 col-sm-pull-10" id="playerscoreboard">
+      <p id="playerscore">0</p>
+    </div>          
 
+  </div><!-- row -->   
+</div><!-- content container -->
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

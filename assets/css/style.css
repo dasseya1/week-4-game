@@ -1,0 +1,61 @@
+body { 
+	/*background-image: url(bg.jpg);*/
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: black;
+}
+
+#title {
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 20px;
+	background-color: #f48942;
+	padding: 10px 0 10px 0;
+	margin-top: 10px;
+	margin-left: -15px;
+}
+
+#description {
+	font-weight: bold;
+	background-color: #C3B091;
+	padding-bottom: 60px;
+	color: green;
+	margin-bottom: 10px;
+}
+
+#scoretomatch {
+	background-color: #85d130;
+	padding-bottom: 50px;
+	margin: 0 10px 10px 0;
+	font-size: 30px;
+}
+
+#win-lose {
+	background-color: #42d1f4;
+	padding-bottom: 32px;
+}
+
+#picture_1,
+#picture_2,
+#picture_3,
+#picture_4 {
+	background-color: white;
+	margin-right: 10px;
+}
+#picture_1 {
+	margin-bottom: 10px;
+}
+
+#totalscore {
+	color: white;
+	background-color: #03a871;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+#playerscoreboard {
+	color: white;
+	background-color: #03a871;
+	padding-bottom: 60px;
+	font-size: 30px;
+}
