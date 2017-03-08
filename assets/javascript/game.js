@@ -1,99 +1,59 @@
-var mainRandNumber = Math.floor((Math.random() * 120) + 19);
-var firstRandNumber;
-var secondRandNumber;
-var thirdRandNumber;
-var forthRandNumber;
-var totalScore = 0;
+var mainRandNumber = Math.floor((Math.random() * 101) + 19);
 var wins = 0;
 var losses = 0;
+var totalScore = 0;
+firstRandNumber = Math.floor((Math.random() * 11) + 1);
+secondRandNumber = Math.floor((Math.random() * 11) + 1);
+thirdRandNumber = Math.floor((Math.random() * 11) + 1);
+forthRandNumber = Math.floor((Math.random() * 11) + 1);
 
-function load () {
-  $('#randomnumber').html('<p>'+ mainRandNumber + '</p>');
+$(document).ready(function() {
+    $('#randomnumber').html(mainRandNumber);
+    $('#playerscore').html(totalScore);
+    $('#picture_1').click(function() {
+        totalScore += firstRandNumber;
+        numAdd();
+      $('#playerscore').html(totalScore);
+    });
+    $('#picture_2').click(function() {
+        totalScore += secondRandNumber;
+        numAdd();
+        $('#playerscore').html(totalScore);
+    });
+    $('#picture_3').click(function() {
+        totalScore += thirdRandNumber;
+        numAdd();
+        $('#playerscore').html(totalScore);
+    });
+    $('#picture_4').click(function() {
+        totalScore += forthRandNumber;
+        numAdd();
+        $('#playerscore').html(totalScore);
+    });
+});
+
+function numAdd() {
+    if (totalScore == mainRandNumber) {
+        $('#result').html("<p>You Won!</p>");
+        wins++;
+        $('#wscore').html(wins);
+        reset();
+    } else if (totalScore > mainRandNumber) {
+        $('#result').html("<p>You Lost!</p>");
+        losses++;
+        $('#lscore').html(losses);
+        reset();
+    }
 };
- 
-window.onload = load;
 
+function reset() {
+    totalScore = 0;
+    firstRandNumber = Math.floor((Math.random() * 11) + 1);
+    secondRandNumber = Math.floor((Math.random() * 11) + 1);
+    thirdRandNumber = Math.floor((Math.random() * 11) + 1);
+    forthRandNumber = Math.floor((Math.random() * 11) + 1);    
+    mainRandNumber = Math.floor((Math.random() * 101) + 19);    
+    $('#randomnumber').html(mainRandNumber);
+};
 
-$('#picture_1').on('click', function(){
-	firstRandNumber = Math.floor((Math.random() * 12) + 1);
-	totalScore += firstRandNumber;
-	console.log(totalScore);
-	$('#playerscore').html('<p>'+ totalScore +'</p>');
-	$('#result').html('<p></p>');
-		if (mainRandNumber === totalScore) {
-			resetwin();
-    	}
-   		else if (totalScore > mainRandNumber) {
-   			resetloss();
-		}
-});
-
-$('#picture_2').on('click', function(){
-	secondRandNumber = Math.floor((Math.random() * 12) + 1);
-	totalScore += secondRandNumber;
-	console.log(totalScore);
-	$('#playerscore').html('<p>'+ totalScore +'</p>');
-	$('#result').html('<p></p>');
-		if (mainRandNumber === totalScore) {
-			resetwin();
-    	}
-   		else if (totalScore > mainRandNumber) {
-   			resetloss();
-		}
-});
-
-$('#picture_3').on('click', function(){
-	thirdRandNumber = Math.floor((Math.random() * 12) + 1);
-	totalScore += thirdRandNumber;
-	console.log(totalScore);
-	$('#playerscore').html('<p>'+ totalScore +'</p>');
-	$('#result').html('<p></p>');
-		if (mainRandNumber === totalScore) {
-			resetwin();
-    	}
-   		else if (totalScore > mainRandNumber) {
-   			resetloss();
-		}
-});
-
-$('#picture_4').on('click', function(){
-	forthRandNumber = Math.floor((Math.random() * 12) + 1);
-	totalScore += forthRandNumber;
-	console.log(totalScore);
-	$('#playerscore').html('<p>'+ totalScore +'</p>');
-	$('#result').html('<p></p>');
-		if (mainRandNumber === totalScore) {
-			resetwin();
-    	}
-   		else if (totalScore > mainRandNumber) {
-   			resetloss();
-		}
-});
-
-function resetloss() {
-	losses++;
-	firstRandNumber = Math.floor((Math.random() * 12) + 1);
-	secondRandNumber = Math.floor((Math.random() * 12) + 1);
-	thirdRandNumber = Math.floor((Math.random() * 12) + 1);
-	forthRandNumber = Math.floor((Math.random() * 12) + 1);	
-	mainRandNumber = Math.floor((Math.random() * 120) + 19);	
-	$('#result').html('<p>You lost!!</p>');
-	$('#playerscore').html('<p>0</p>');
-	$('#lscore').html('<span>'+ losses + '</span>');
-	$('#randomnumber').html('<p>'+ mainRandNumber + '</p>');
-}
-
-function resetwin() {
-	wins++;
-	firstRandNumber = Math.floor((Math.random() * 12) + 1);
-	secondRandNumber = Math.floor((Math.random() * 12) + 1);
-	thirdRandNumber = Math.floor((Math.random() * 12) + 1);
-	forthRandNumber = Math.floor((Math.random() * 12) + 1);
-	mainRandNumber = Math.floor((Math.random() * 120) + 19);
-	$('#result').html('<p>You won!!</p>');
-	$('#playerscore').html('<p>0</p>');
-	$('#wscore').html('<span>'+ wins + '</span>');
-	$('#randomnumber').html('<p>'+ mainRandNumber + '</p>');
-}
- 
 
