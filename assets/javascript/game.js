@@ -12,21 +12,25 @@ $(document).ready(function() {
     $('#playerscore').html(totalScore);
     $('#picture_1').click(function() {
         totalScore += firstRandNumber;
+        $('#result').html("-----------");
         numAdd();
       $('#playerscore').html(totalScore);
     });
     $('#picture_2').click(function() {
         totalScore += secondRandNumber;
+        $('#result').html("-----------");
         numAdd();
         $('#playerscore').html(totalScore);
     });
     $('#picture_3').click(function() {
         totalScore += thirdRandNumber;
+        $('#result').html("-----------");
         numAdd();
         $('#playerscore').html(totalScore);
     });
     $('#picture_4').click(function() {
         totalScore += forthRandNumber;
+        $('#result').html("-----------");
         numAdd();
         $('#playerscore').html(totalScore);
     });
